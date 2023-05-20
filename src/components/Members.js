@@ -8,7 +8,7 @@ export default class Members extends Component {
             <div className='container col-md-8 my-5'>
                 <div className='card Members'>
                     <div className='card-header'>
-                        <h2>Meet Our Current Members</h2>
+                        <h2>Meet Our Current Therapists</h2>
                     </div>
                         <div className="container">
                             <div className="card-body mb-3">

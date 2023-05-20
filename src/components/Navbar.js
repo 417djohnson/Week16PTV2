@@ -7,7 +7,7 @@ export default class Navbar extends Component {
         return (
             <nav className='navbar navbar-expand-lg navbar-dark bg-dark'>
                 <Link className='navbar-brand' to='/'>
-                    Dogg Days
+                    Life Essentials
                 </Link>
                 <button 
                     className='navbar-toggler'
@@ -26,21 +26,17 @@ export default class Navbar extends Component {
                             <NavLink exact to='/' className='nav-link'>Home</NavLink>
                         </li>
                         <li className="nav-item dropdown">
-                            <NavLink exact to='/members' className="nav-link dropdown-toggle" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            Members
+                            <NavLink exact to='/therapists' className="nav-link dropdown-toggle" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            Therapists
                             </NavLink>
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <NavLink exact to='/members/iggy' className="dropdown-item">Iggy</NavLink>
                                 <NavLink exact to='/members/bonnie' className="dropdown-item">Bonnie</NavLink>
                                 <NavLink exact to='/members/buster' className="dropdown-item">Buster</NavLink>
-                                <NavLink exact to='/members/oswald' className="dropdown-item">Oswald</NavLink>
                                 <NavLink exact to='/members/ella' className="dropdown-item">Ella</NavLink>
-                                <NavLink exact to='/members/pickles' className="dropdown-item">Pickles</NavLink>
-                                <NavLink exact to='/read' className="dropdown-item">Coming Soon</NavLink>
                                 </div>
                         </li>
                         <li className='nav-item'>
-                            <NavLink exact to='/create' className='nav-link'>Enroll</NavLink>
+                            <NavLink exact to='/create' className='nav-link'>Apply</NavLink>
                         </li>
                     </ul>
                 </div>

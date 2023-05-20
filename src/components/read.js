@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Button } from 'semantic-ui-react';
 import "./read.css";
 import './detail.css';
-import dog from "../images/dog.jpg";
+import dog from "../images/candles.png";
 
 export default function Read() {
     const getData = () => {
@@ -47,17 +47,17 @@ export default function Read() {
                             <div className='member-detail-card card mt-5'>
                                 <img className='card-img-top mx-auto my-2' src={dog} alt='' />
                                 <div className="card-header">
-                                    <h2 className='card-title text-center'>{data.dogName}, Coming Soon!</h2>  
+                                    <h2 className='card-title text-center'>{data.dogName}, Thank you!</h2>  
                                 </div>
                                 <div className='card-body'>
                                     <ul className='list-group list-group-flush'>
-                                        <li className='list-group-item'><strong>Breed:</strong> {data.dogBreed}</li>
-                                        <li className='list-group-item'><strong>Owner(s):</strong> {data.ownerName}</li>
+                                        <li className='list-group-item'><strong>Speciality:</strong> {data.dogBreed}</li>
+                                        <li className='list-group-item'><strong>License Number:</strong> {data.ownerName}</li>
                                         <li className='list-group-item'><strong>About:</strong> {data.dogAbout}</li>
                                     </ul>
                                     <div className='card-body'>
                                         <p>Thank you so much for your entry.  We're looking forwared to 
-                                            meeting {data.dogName} and will be in touch soon!</p>
+                                            meeting you and will be in touch soon!</p>
                                         <div className='card-body'>
                                             <div class='row mx-auto'>
                                             <Link to='/members'>

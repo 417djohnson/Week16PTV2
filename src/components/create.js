@@ -6,19 +6,15 @@ import "./Members.css";
 
 export default function Create() {
     let history = useHistory();
-    const [dogName, setDogName] = useState('');
-    const [dogBreed, setDogBreed] = useState('');
-    const [ownerName, setOwnerName] = useState('');
-    const [dogAbout, setDogAbout] = useState('');
-    const [ownerEmail, setOwnerEmail] = useState('');
+    const [therapistName, setTherapistName] = useState('');
+    const [therapistAbout, setTherapistAbout] = useState('');
+    const [therapistEmail, setTherapistEmail] = useState('');
     
     const postData = () => {
-        axios.post(`https://63f9ae4a897af748dcc1ec8f.mockapi.io/api/devkela/dogs`, {
-            dogName,
-            dogBreed,
-            ownerName,
-            dogAbout,
-            ownerEmail
+        axios.post(`https://6469454503bb12ac2089a02b.mockapi.io/AlsoApplicants`, {
+            therapistName,
+            therapistAbout,
+            therapistEmail
         }).then(() => {
             history.push('/read')
         })
@@ -27,33 +23,25 @@ export default function Create() {
     return (
         <>
         <div class='container col-md-8 my-5'>
-            <div className="card Enroll">
+            <div className="card Apply">
                 <div class='card-header'>
-                    <h2>Enroll</h2>
+                    <h2>Apply</h2>
                 </div>
                     <div class='card-body'>
                         <Form className="create-form">
                         <Form.Group widths='equal'>
                             <Form.Field>
-                                <label>Dog's Name</label>
-                                <input placeholder='Fluffy' onChange={(e) => setDogName(e.target.value)}/>
+                                <label>Your Name</label>
+                                <input placeholder='Janice Smith' onChange={(e) => setTherapistName(e.target.value)}/>
                             </Form.Field>
-                            <Form.Field>
-                            <label>Dog's Breed</label>
-                            <input placeholder='Poodle' onChange={(e) => setDogBreed(e.target.value)}/>
-                            </Form.Field>
-                            <Form.Field>
-                            <label>Owner's Name</label>
-                            <input placeholder='Karen' onChange={(e) => setOwnerName(e.target.value)}/>
-                            </Form.Field>
-                        </Form.Group>
+                            </Form.Group>
                             <Form.Field>
                                 <label>About</label>
-                                    <input placeholder='Fluffy loves cookies!' onChange={(e) => setDogAbout(e.target.value)}/>
+                                    <input placeholder='Include graduation year, school of study, specialities' onChange={(e) => setTherapistAbout(e.target.value)}/>
                             </Form.Field>
                             <Form.Field>
                                 <label>Email</label>
-                                <input placeholder='klovesfluff@dogmail.com' onChange={(e) => setOwnerEmail(e.target.value)}/>
+                                <input placeholder='jsmith@mymail.com' onChange={(e) => setTherapistEmail(e.target.value)}/>
                             </Form.Field>
                             <Button onClick={postData} type='submit'>Submit</Button>
                         </Form>

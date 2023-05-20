@@ -16,11 +16,11 @@ export default function Update() {
 
 useEffect(() => {
         setID(localStorage.getItem('ID'))
-        setDogName(localStorage.getItem('Dog Name'));
-        setDogBreed(localStorage.getItem('Dog Breed'));
-        setOwnerName(localStorage.getItem('Owner Name'))
-        setDogAbout(localStorage.getItem('About Dog'))
-        setOwnerEmail(localStorage.getItem('Owner Email'))
+        setDogName(localStorage.getItem('Your Name'));
+        setDogBreed(localStorage.getItem('Speciality'));
+        setOwnerName(localStorage.getItem('License Number'))
+        setDogAbout(localStorage.getItem('About You'))
+        setOwnerEmail(localStorage.getItem('Email'))
 }, []);
 
 const updateAPIData = () => {
@@ -47,25 +47,25 @@ const updateAPIData = () => {
                         <Form className="create-form">
                             <Form.Group widths='equal'>
                                 <Form.Field>
-                                    <label>Dog Name</label>
-                                    <input placeholder='Fluffy' value={dogName} onChange={(e) => setDogName(e.target.value)}/>
+                                    <label>Your Name</label>
+                                    <input placeholder='Janice Smith' value={dogName} onChange={(e) => setDogName(e.target.value)}/>
                                 </Form.Field>
                                 <Form.Field>
-                                    <label>Dog Breed</label>
-                                    <input placeholder='Poodle' value={dogBreed} onChange={(e) => setDogBreed(e.target.value)}/>
+                                    <label>Speciality</label>
+                                    <input placeholder='Deep Tissue' value={dogBreed} onChange={(e) => setDogBreed(e.target.value)}/>
                                 </Form.Field>
                                 <Form.Field>
-                                    <label>Owner Name</label>
-                                    <input placeholder='Karen' value={ownerName} onChange={(e) => setOwnerName(e.target.value)}/>
+                                    <label>MO License Number</label>
+                                    <input placeholder='200112345678' value={ownerName} onChange={(e) => setOwnerName(e.target.value)}/>
                                 </Form.Field>
                             </Form.Group>
                                 <Form.Field>
-                                    <label>About Dog</label>
-                                    <input placeholder='Fluffy loves cookies!' value={dogAbout} onChange={(e) => setDogAbout(e.target.value)}/>
+                                    <label>About You</label>
+                                    <input placeholder='Include graduation year, school of study' value={dogAbout} onChange={(e) => setDogAbout(e.target.value)}/>
                                 </Form.Field>
                                 <Form.Field>
-                                    <label>Owner Email</label>
-                                    <input placeholder='klovesfluff@dogmail.com' value={ownerEmail} onChange={(e) => setOwnerEmail(e.target.value)}/>
+                                    <label>Your Email</label>
+                                    <input placeholder='jsmith@myemail.com' value={ownerEmail} onChange={(e) => setOwnerEmail(e.target.value)}/>
                                 </Form.Field>
                                     <Button type='submit' onClick={updateAPIData}>Submit</Button>
                         </Form>

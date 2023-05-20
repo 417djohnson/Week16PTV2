@@ -14,8 +14,8 @@ export default class Detail extends Component {
                             <div className='card-body'>
                                 <h2 className='card-title text-center'>{member.name}</h2>
                                 <ul className='list-group list-group-flush'>
-                                    <li className='list-group-item'><strong>Breed:</strong> {member.breed}</li>
-                                    <li className='list-group-item'><strong>Owner:</strong> {member.owner}</li>
+                                    <li className='list-group-item'><strong>School:</strong> {member.school}</li>
+                                    <li className='list-group-item'><strong>Days:</strong> {member.days}</li>
                                     <li className='list-group-item'><strong>About:</strong> {member.about}</li>
                                 </ul>
                                 <div className='card-body'>
