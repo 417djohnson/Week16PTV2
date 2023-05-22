@@ -17,7 +17,7 @@ export default class Detail extends Component {
                                     <li className='list-group-item'><strong>About:</strong> {therapist.about}</li>
                                 </ul>
                                 <div className='card-body'>
-                                    <Link to='/therapist' className='btn btn-light'>Back to Therapists</Link>
+                                    <Link to='/therapist' className='btn btn-light'>Back to Home</Link>
                                 </div>
                             </div>
                         </div>

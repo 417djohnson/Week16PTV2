@@ -33,7 +33,6 @@ export default class Navbar extends Component {
                                 <NavLink exact to='/therapists/bonnie' className="dropdown-item">Bonnie</NavLink>
                                 <NavLink exact to='/therapists/buster' className="dropdown-item">Buster</NavLink>
                                 <NavLink exact to='/therapists/ella' className="dropdown-item">Ella</NavLink>
-                                <NavLink exact to='/therapists/coming' className="dropdown-item">Coming Soon!</NavLink>
                                 </div>
                         </li>
                         <li className='nav-item'>
