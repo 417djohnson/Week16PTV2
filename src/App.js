@@ -5,10 +5,12 @@ import "./App.css";
 import buster from "./images/buster.jpg";
 import ella from "./images/ella.jpg";
 import bonnie from "./images/bonnie.jpg";
+import coming from "./images/candles.png";
+
  
 export default class App extends Component {
   static defaultProps =  {
-    members: [
+    therapists: [
     {
         name: "Bonnie",
         src: bonnie,
@@ -24,14 +26,20 @@ export default class App extends Component {
         src: ella,
         about: "Specializes in Swedish and Pre-Natal therapy."
     }, 
+    {
+      name: "Coming Soon!",
+      src: coming,
+      about: "You could work here! Click Apply!"
+  }, 
+        
         ]
   }
   render() {   
     return (
       <div>
-          <Navbar members={this.props.members} />
+          <Navbar therapists={this.props.therapists} />
           <div className='App'>
-          <Routes members={this.props.members} />
+          <Routes therapists={this.props.therapists} />
           </div>
       </div>
     );

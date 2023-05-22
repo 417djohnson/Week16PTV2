@@ -66,8 +66,8 @@ img {
 }
 
 .Home,
-.Members,
-.Enroll,
+.Therapists,
+.Apply,
 .Read,
 .Update {
   height: auto;
@@ -97,7 +97,7 @@ img {
 } 
 
 h1 {
-  font-family: 'Papyrus';
+  font-family: 'Romanica';
   font-size: 8rem;
   text-shadow: 2px 2px #ffffff;
   line-height: 1em;

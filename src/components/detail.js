@@ -4,22 +4,20 @@ import "./detail.css";
 
 export default class Detail extends Component {
     render() {
-        let { member } = this.props;
+        let { therapist } = this.props;
         return (
             <div className="container">
-                <div className='cute-member row justify-content-center mt-5'>
+                <div className='cute-therapist row justify-content-center mt-5'>
                     <div className='col-11 col-lg-5'>
-                        <div className='member-detail-card DogDetails-card card'>
-                            <img className='card-img-top mt-2 mx-auto' src={member.src} alt={member.name} />
+                        <div className='therapist-detail-card TherapistDetails-card card'>
+                            <img className='card-img-top mt-2 mx-auto' src={therapist.src} alt={therapist.name} />
                             <div className='card-body'>
-                                <h2 className='card-title text-center'>{member.name}</h2>
+                                <h2 className='card-title text-center'>{therapist.name}</h2>
                                 <ul className='list-group list-group-flush'>
-                                    <li className='list-group-item'><strong>School:</strong> {member.school}</li>
-                                    <li className='list-group-item'><strong>Days:</strong> {member.days}</li>
-                                    <li className='list-group-item'><strong>About:</strong> {member.about}</li>
+                                    <li className='list-group-item'><strong>About:</strong> {therapist.about}</li>
                                 </ul>
                                 <div className='card-body'>
-                                    <Link to='/members' className='btn btn-light'>Back to Members</Link>
+                                    <Link to='/therapist' className='btn btn-light'>Back to Therapists</Link>
                                 </div>
                             </div>
                         </div>

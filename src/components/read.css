@@ -1,8 +1,8 @@
-.member-img img {
+.therapist-img img {
     width: 40%;
 }
 
-.member-img {
+.therapist-img {
     display: flex;
     justify-content: center;
 }

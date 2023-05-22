@@ -7,7 +7,7 @@ export default class Navbar extends Component {
         return (
             <nav className='navbar navbar-expand-lg navbar-dark bg-dark'>
                 <Link className='navbar-brand' to='/'>
-                    Life Essentials
+                    Precision Wellness
                 </Link>
                 <button 
                     className='navbar-toggler'
@@ -30,9 +30,10 @@ export default class Navbar extends Component {
                             Therapists
                             </NavLink>
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <NavLink exact to='/members/bonnie' className="dropdown-item">Bonnie</NavLink>
-                                <NavLink exact to='/members/buster' className="dropdown-item">Buster</NavLink>
-                                <NavLink exact to='/members/ella' className="dropdown-item">Ella</NavLink>
+                                <NavLink exact to='/therapists/bonnie' className="dropdown-item">Bonnie</NavLink>
+                                <NavLink exact to='/therapists/buster' className="dropdown-item">Buster</NavLink>
+                                <NavLink exact to='/therapists/ella' className="dropdown-item">Ella</NavLink>
+                                <NavLink exact to='/therapists/coming' className="dropdown-item">Coming Soon!</NavLink>
                                 </div>
                         </li>
                         <li className='nav-item'>

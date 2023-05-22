@@ -2,34 +2,29 @@ import React, {useState, useEffect } from 'react';
 import { useHistory } from 'react-router';
 import axios from 'axios';
 import { Form, Button } from 'semantic-ui-react';
-import "./Members.css";
+import "./Therapists.css";
 import '../App.css'
 
 export default function Update() {
     let history = useHistory();
-    const [id, setID] = useState(null);
-    const [dogName, setDogName] = useState('');
-    const [dogBreed, setDogBreed] = useState('');
-    const [ownerName, setOwnerName] = useState('');
-    const [dogAbout, setDogAbout] = useState('');
-    const [ownerEmail, setOwnerEmail] = useState('');
+    const [id, setID] = useState('');
+    const [therapistName, setTherapistName] = useState('');
+    const [therapistLicense, setTherapistLicense] = useState('');
+    const [therapistEmail, setTherapistEmail] = useState('');
 
 useEffect(() => {
         setID(localStorage.getItem('ID'))
-        setDogName(localStorage.getItem('Your Name'));
-        setDogBreed(localStorage.getItem('Speciality'));
-        setOwnerName(localStorage.getItem('License Number'))
-        setDogAbout(localStorage.getItem('About You'))
-        setOwnerEmail(localStorage.getItem('Email'))
+        setTherapistName(localStorage.getItem('Your Name'));
+        setTherapistLicense(localStorage.getItem('Your License Number'))
+        setTherapistEmail(localStorage.getItem('Email'))
 }, []);
 
+
 const updateAPIData = () => {
-    axios.put(`https://63f9ae4a897af748dcc1ec8f.mockapi.io/api/devkela/dogs/${id}`, {
-        dogName,
-        dogBreed,
-        ownerName,
-        dogAbout,
-        ownerEmail
+    axios.put(`https://6469454503bb12ac2089a02b.mockapi.io/AlsoApplicants/${id}`, {
+        therapistName,
+        therapistLicense,
+        therapistEmail
 	}).then(() => {
         history.push('/read')
     })
@@ -46,28 +41,24 @@ const updateAPIData = () => {
                     <div className="card-body mb-3">
                         <Form className="create-form">
                             <Form.Group widths='equal'>
+                                
                                 <Form.Field>
-                                    <label>Your Name</label>
-                                    <input placeholder='Janice Smith' value={dogName} onChange={(e) => setDogName(e.target.value)}/>
+                                    <label>First and Last Name</label>
+                                    <input placeholder='As It Appears On Your MO License' value={therapistName} onChange={(e) => setTherapistName(e.target.value)}/>
                                 </Form.Field>
-                                <Form.Field>
-                                    <label>Speciality</label>
-                                    <input placeholder='Deep Tissue' value={dogBreed} onChange={(e) => setDogBreed(e.target.value)}/>
-                                </Form.Field>
+                            
                                 <Form.Field>
                                     <label>MO License Number</label>
-                                    <input placeholder='200112345678' value={ownerName} onChange={(e) => setOwnerName(e.target.value)}/>
+                                    <input placeholder='200112345678' value={therapistLicense} onChange={(e) => setTherapistLicense(e.target.value)}/>
                                 </Form.Field>
-                            </Form.Group>
-                                <Form.Field>
-                                    <label>About You</label>
-                                    <input placeholder='Include graduation year, school of study' value={dogAbout} onChange={(e) => setDogAbout(e.target.value)}/>
-                                </Form.Field>
+                                                            
                                 <Form.Field>
                                     <label>Your Email</label>
-                                    <input placeholder='jsmith@myemail.com' value={ownerEmail} onChange={(e) => setOwnerEmail(e.target.value)}/>
+                                    <input placeholder='jsmith@myemail.com' value={therapistEmail} onChange={(e) => setTherapistEmail(e.target.value)}/>
                                 </Form.Field>
-                                    <Button type='submit' onClick={updateAPIData}>Submit</Button>
+                            </Form.Group>
+                                    
+                                    <Button type='submit' onClick={updateAPIData}>Update</Button>
                         </Form>
                     </div>
                 </div>

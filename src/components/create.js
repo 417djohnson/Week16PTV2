@@ -2,18 +2,18 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router';
 import axios from 'axios';
 import { Form, Button } from 'semantic-ui-react'
-import "./Members.css";
+import "./Therapists.css";
 
 export default function Create() {
     let history = useHistory();
     const [therapistName, setTherapistName] = useState('');
-    const [therapistAbout, setTherapistAbout] = useState('');
+    const [therapistLicense, setTherapistLicense] = useState('');
     const [therapistEmail, setTherapistEmail] = useState('');
     
     const postData = () => {
-        axios.post(`https://6469454503bb12ac2089a02b.mockapi.io/AlsoApplicants`, {
+        axios.post(`https://6469454503bb12ac2089a02b.mockapi.io/AlsoApplicants/`, {
             therapistName,
-            therapistAbout,
+            therapistLicense,
             therapistEmail
         }).then(() => {
             history.push('/read')
@@ -22,28 +22,28 @@ export default function Create() {
 
     return (
         <>
-        <div class='container col-md-8 my-5'>
+        <div className='container col-md-8 my-5'>
             <div className="card Apply">
-                <div class='card-header'>
-                    <h2>Apply</h2>
+                <div className='card-header'>
+                    <h2>Work With Us</h2>
                 </div>
                     <div class='card-body'>
                         <Form className="create-form">
                         <Form.Group widths='equal'>
                             <Form.Field>
-                                <label>Your Name</label>
-                                <input placeholder='Janice Smith' onChange={(e) => setTherapistName(e.target.value)}/>
+                                <label>First and Last Name</label>
+                                <input placeholder='As It Appears On Your MO License' onChange={(e) => setTherapistName(e.target.value)}/>
                             </Form.Field>
-                            </Form.Group>
                             <Form.Field>
-                                <label>About</label>
-                                    <input placeholder='Include graduation year, school of study, specialities' onChange={(e) => setTherapistAbout(e.target.value)}/>
+                                <label>MO License Number</label>
+                                    <input placeholder='2011123456' onChange={(e) => setTherapistLicense(e.target.value)}/>
                             </Form.Field>
                             <Form.Field>
                                 <label>Email</label>
                                 <input placeholder='jsmith@mymail.com' onChange={(e) => setTherapistEmail(e.target.value)}/>
                             </Form.Field>
-                            <Button onClick={postData} type='submit'>Submit</Button>
+                            </Form.Group>    
+                            <Button onClick={postData} type='submit'>Apply</Button>
                         </Form>
                     </div>
             </div>
